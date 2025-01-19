@@ -1,6 +1,6 @@
 'use client'
 
-import Services from '@/components/services';
+import Services from '@/components/Services';
 
 export default function services() {
 

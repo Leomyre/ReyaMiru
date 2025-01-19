@@ -7,7 +7,7 @@ import ParallaxBackground from '../components/ParallaxBackground'
 
 export const metadata = {
   title: 'Léomyre',
-  description: 'Portfolio du développeur Léomyre',
+  description: 'Portfolio of developer Léomyre',
 }
 
 export default function RootLayout({ children }) {
@@ -16,9 +16,10 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col min-h-screen text-white">
         <ParallaxBackground />
         <BackgroundAnimation />
-        <div className="flex-grow container mx-auto px-4 py-8 relative z-10">
-          <Header />
-          <main className="mt-8">
+        <div className="flex-grow container mx-auto px-4 py-8 relative z-10 pt-16">
+          {/* Fixed Header */}
+          <Header className="fixed top-0 left-0 w-full z-50" />
+          <main className="mt-24">
             {children}
           </main>
         </div>
@@ -28,4 +29,3 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-

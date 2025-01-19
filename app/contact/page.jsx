@@ -5,7 +5,6 @@ import { FaEnvelope, FaPhoneAlt, FaGithub, FaFacebookF, FaWhatsapp } from 'react
 export default function Contact() {
   const contact = {
     email: "ghleomyre@gmail.com",
-    phone: "+261385807810",
     whatsapp: "0385807810",
     github: "https://github.com/Leomyre",
     facebook: "https://www.facebook.com/Akari.Leomyre",
@@ -28,12 +27,6 @@ export default function Contact() {
               >
                 {contact.email}
               </a>
-            </p>
-
-            <p className="flex items-center">
-              <FaPhoneAlt className="h-6 w-6 text-blue-300 mr-2" />
-              <strong className="text-blue-300 mr-2">Téléphone:</strong>
-              <span className="text-gray-200">{contact.phone}</span>
             </p>
 
             <p className="flex items-center">

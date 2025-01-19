@@ -1,22 +1,19 @@
 'use client'
 
-import { useState, useEffect } from 'react';
-import Loading from '../../components/Loading';
-
 export default function Projects() {
   const projects = [
     {
       id: 1,
       title: "Chika Chat",
-      description: "Une application de messagerie sécurisée (complète)",
-      link: "#", // Ajouter le lien vers le projet si disponible
+      description: "A secure and lightweight messaging application designed for ease of use, offering a simple yet efficient user experience with end-to-end encryption to ensure privacy and security of conversations. It focuses on providing a fast, intuitive interface for seamless communication, ideal for users who prioritize both functionality and simplicity.",
+      link: "#", // Add project link if available
     },
   ];
 
   return (
     <div className="bg-gray-800/30 p-8 rounded-lg backdrop-filter backdrop-blur-lg shadow-xl border border-gray-700/20">
       <h2 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-gray-100">
-        Mes Projets
+        Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map(project => (
@@ -32,7 +29,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="text-blue-300 hover:text-gray-100 transition-colors duration-300 inline-flex items-center"
             >
-              Voir le projet →
+              View Project →
             </a>
           </div>
         ))}

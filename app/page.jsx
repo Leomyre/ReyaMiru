@@ -4,73 +4,81 @@ import FavoriteTechnologies from '@/components/FavoriteTechnologies';
 import Caractere from '@/components/Caractere';
 import Services from '@/components/Services';
 import Contact from '@/app/contact/page';
+import Projects from '@/app/projects/page';
 
 export default function Home() {
   const user = {
     name: 'Léomyre',
-    bio: 'Développeur passionné par les technologies modernes et la création d\'applications web. J\'aime relever des défis techniques et apprendre de nouvelles compétences chaque jour.',
+    bio: 'A developer passionate about modern technologies and creating web applications. I love taking on technical challenges and learning new skills every day.',
     image: '/leomyre.jpg',
     cv: '/cv_leomyre.pdf',
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-center text-gray-100 px-4">
-      <div className="bg-gray-800/40 p-10 rounded-lg shadow-2xl border border-gray-700/30 max-w-4xl w-full">
+    <div className="flex flex-col items-center justify-center min-h-screen text-center text-gray-100 px-6 py-8">
+  <div className="bg-gray-800/40 p-10 rounded-lg shadow-2xl border border-gray-700/30 max-w-4xl w-full h-full">
         <h1 className="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-gray-100">
-          Bienvenue sur mon Portfolio
+          Welcome to my Portfolio
         </h1>
         
         <div className="mb-6 flex justify-center">
           <img 
             src={user.image} 
-            alt="Portrait de l'utilisateur" 
+            alt="User portrait" 
             className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-lg ring-4 ring-blue-500" 
           />
         </div>
         
         <h2 className="text-3xl font-bold mb-4">
-          Je suis <span className="text-blue-300">{user.name}</span>
+          I am <span className="text-blue-300">{user.name}</span>
         </h2>
-        <p className="text-lg md:text-xl mb-8 leading-relaxed text-gray-200">
+        <div className="bg-gray-800/30 p-8 rounded-lg backdrop-filter backdrop-blur-lg shadow-xl border border-gray-700/20 my-8">
+          <div className="flex flex-col items-center bg-gray-900/50 p-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105" >
+          <p className="text-lg md:text-xl mb-8 leading-relaxed text-gray-200">
           {user.bio}
         </p>
+          </div>
+        
+        </div>
+        
 
         <div className="flex flex-wrap justify-center gap-6 mb-8">
           <Link 
             href="/projects" 
             className="flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-            aria-label="Voir mes projets"
+            aria-label="View my projects"
           >
             <PaperClipIcon className="h-6 w-6 mr-2" />
-            Voir mes projets
+            View my projects
           </Link>
           <Link 
             href="/skills" 
             className="flex items-center bg-gray-600 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-700 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-            aria-label="Mes compétences"
+            aria-label="My skills"
           >
             <AcademicCapIcon className="h-6 w-6 mr-2" />
-            Mes compétences
+            My skills
           </Link>
           <a 
             href={user.cv} 
             download 
             className="flex items-center bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-            aria-label="Télécharger mon CV"
+            aria-label="Download my CV"
           >
             <ArrowDownTrayIcon className="h-6 w-6 mr-2" />
-            Télécharger mon CV
+            Download my CV
           </a>
         </div>
 
-        {/* Espacement entre les sections */}
+        {/* Spacing between sections */}
         <div className="space-y-12">
           <Caractere />
           <Services />
+          <Projects />
           <FavoriteTechnologies />
         </div>
 
-        {/* Section Contact avec marge */}
+        {/* Contact section with margin */}
         <div className="mt-12">
           <Contact />
         </div>

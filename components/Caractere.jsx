@@ -6,26 +6,26 @@ import { FaRocket, FaLightbulb, FaCogs, FaHeart } from 'react-icons/fa';
 const caractereData = [
   {
     icon: FaRocket,
-    title: 'Dynamique',
-    description: 'Toujours prêt à relever de nouveaux défis avec énergie et enthousiasme.',
+    title: 'Dynamic',
+    description: 'Always ready to take on new challenges with energy and enthusiasm.',
     color: 'text-red-500',
   },
   {
     icon: FaLightbulb,
-    title: 'Créatif',
-    description: 'Transformer des idées en solutions concrètes pour répondre à des besoins spécifiques.',
+    title: 'Creative',
+    description: 'Turning ideas into concrete solutions to meet specific needs.',
     color: 'text-yellow-500',
   },
   {
     icon: FaCogs,
-    title: 'Orienté Résultat',
-    description: 'Un esprit analytique, toujours orienté vers des solutions pratiques et efficaces.',
+    title: 'Result-Oriented',
+    description: 'An analytical mind, always focused on practical and effective solutions.',
     color: 'text-blue-500',
   },
   {
     icon: FaHeart,
-    title: 'Empathique',
-    description: 'Comprendre les besoins des autres et collaborer efficacement en équipe.',
+    title: 'Empathetic',
+    description: 'Understanding others\' needs and collaborating effectively within a team.',
     color: 'text-pink-500',
   },
 ];
@@ -34,7 +34,7 @@ export default function Caractere() {
   return (
     <div className="bg-gray-800/30 p-8 rounded-lg backdrop-filter backdrop-blur-lg shadow-xl border border-gray-700/20 my-8">
       <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-gray-100">
-        Mes Caractères
+        Traits
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {caractereData.map((char, index) => (
