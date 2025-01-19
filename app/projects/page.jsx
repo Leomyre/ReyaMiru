@@ -6,7 +6,7 @@ export default function Projects() {
       id: 1,
       title: "Chika Chat",
       description: "A secure and lightweight messaging application designed for ease of use, offering a simple yet efficient user experience with end-to-end encryption to ensure privacy and security of conversations. It focuses on providing a fast, intuitive interface for seamless communication, ideal for users who prioritize both functionality and simplicity.",
-      link: "#", // Add project link if available
+      link: "https://chika-chat.onrender.com", // Add project link if available
     },
   ];
 

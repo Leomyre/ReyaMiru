@@ -5,10 +5,12 @@ import Caractere from '@/components/Caractere';
 import Services from '@/components/Services';
 import Contact from '@/app/contact/page';
 import Projects from '@/app/projects/page';
+import AnimatedIntro from '../components/AnimatedIntro';
+import AnimatedBio from '../components/AnimatedBio';
 
 export default function Home() {
   const user = {
-    name: 'Léomyre',
+    name: "Hello, I am Léomyre",
     bio: 'A developer passionate about modern technologies and creating web applications. I love taking on technical challenges and learning new skills every day.',
     image: '/leomyre.jpg',
     cv: '/cv_leomyre.pdf',
@@ -28,17 +30,15 @@ export default function Home() {
             className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-lg ring-4 ring-blue-500" 
           />
         </div>
-        
-        <h2 className="text-3xl font-bold mb-4">
-          I am <span className="text-blue-300">{user.name}</span>
-        </h2>
+
         <div className="bg-gray-800/30 p-8 rounded-lg backdrop-filter backdrop-blur-lg shadow-xl border border-gray-700/20 my-8">
+          <div className="text-center">
+        <AnimatedIntro name={user.name} /></div>
           <div className="flex flex-col items-center bg-gray-900/50 p-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105" >
-          <p className="text-lg md:text-xl mb-8 leading-relaxed text-gray-200">
-          {user.bio}
-        </p>
+          <div className="text-center">
+        <AnimatedBio name={user.bio} /></div>
+            
           </div>
-        
         </div>
         
 
