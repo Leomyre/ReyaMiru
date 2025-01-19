@@ -17,12 +17,17 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center text-gray-100 px-6 py-8">
-  <div className="bg-gray-800/40 p-10 rounded-lg shadow-2xl border border-gray-700/30 max-w-4xl w-full h-full">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full text-center text-gray-100 px-6 py-8">
+      {/* Main container with max-width to limit the size */}
+      <div className="bg-gray-800/40 p-10 rounded-lg shadow-2xl border border-gray-700/30 w-full min-h-screen flex flex-col items-center">
+
+        
+        {/* Main title */}
         <h1 className="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-gray-100">
           Welcome to my Portfolio
         </h1>
         
+        {/* User image */}
         <div className="mb-6 flex justify-center">
           <img 
             src={user.image} 
@@ -31,18 +36,20 @@ export default function Home() {
           />
         </div>
 
-        <div className="bg-gray-800/30 p-8 rounded-lg backdrop-filter backdrop-blur-lg shadow-xl border border-gray-700/20 my-8">
-          <div className="text-center">
-        <AnimatedIntro name={user.name} /></div>
-          <div className="flex flex-col items-center bg-gray-900/50 p-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105" >
-          <div className="text-center">
-        <AnimatedBio name={user.bio} /></div>
-            
+        {/* Animated text and bio */}
+        <div className="bg-gray-800/30 p-8 rounded-lg backdrop-filter backdrop-blur-lg shadow-xl border border-gray-700/20 my-8 w-full">
+          <div className="text-center mb-4">
+            <AnimatedIntro name={user.name} />
+          </div>
+          <div className="flex flex-col items-center bg-gray-900/50 p-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <div className="text-center">
+              <AnimatedBio name={user.bio} />
+            </div>
           </div>
         </div>
-        
 
-        <div className="flex flex-wrap justify-center gap-6 mb-8">
+        {/* Buttons */}
+        <div className="flex flex-wrap justify-center gap-6 mb-8 w-full">
           <Link 
             href="/projects" 
             className="flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
@@ -70,16 +77,16 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Spacing between sections */}
-        <div className="space-y-12">
+        {/* Sections */}
+        <div className="space-y-12 w-full mb-12">
           <Caractere />
           <Services />
           <Projects />
           <FavoriteTechnologies />
         </div>
 
-        {/* Contact section with margin */}
-        <div className="mt-12">
+        {/* Contact section */}
+        <div className="mt-12 w-full">
           <Contact />
         </div>
       </div>

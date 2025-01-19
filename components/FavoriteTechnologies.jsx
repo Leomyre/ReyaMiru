@@ -5,22 +5,22 @@ const technologies = [
     name: 'Django', 
     icon: SiDjango, 
     color: 'text-green-600',
-    description: 'Framework Python puissant pour construire des applications web sécurisées et évolutives.',
+    description: 'Powerful Python framework for building secure and scalable web applications.',
     features: [
-      'Gestion des utilisateurs et authentification intégrées',
-      'Back-end robuste pour les projets complexes',
-      'Support des API REST via Django Rest Framework',
+      'Built-in user management and authentication',
+      'Robust back-end for complex projects',
+      'Support for REST APIs via Django Rest Framework',
     ]
   },
   { 
     name: 'Next.js', 
     icon: SiNextdotjs, 
     color: 'text-white',
-    description: 'Framework React pour créer des interfaces modernes et performantes.',
+    description: 'React framework for building modern, high-performance user interfaces.',
     features: [
-      'Prise en charge du rendu côté serveur (SSR) pour le SEO',
-      'Flexibilité avec le rendu statique ou dynamique',
-      'Optimisation des performances et chargement rapide des pages',
+      'Support for server-side rendering (SSR) for SEO',
+      'Flexibility with static or dynamic rendering',
+      'Optimized performance and fast page loading',
     ]
   },
 ]
@@ -29,7 +29,7 @@ export default function FavoriteTechnologies() {
   return (
     <div className="bg-gray-800/30 p-8 rounded-lg backdrop-filter backdrop-blur-lg shadow-xl border border-gray-700/20 my-8">
       <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-gray-100">
-        Mes Technologies Préférées
+        My Favorite Technologies
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {technologies.map((tech) => (
