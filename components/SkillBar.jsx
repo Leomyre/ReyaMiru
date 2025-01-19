@@ -28,7 +28,7 @@ export default function SkillBar({ name, level }) {
   }, [level])
 
   return (
-    <div ref={skillRef}>
+    <div ref={skillRef} className='flex flex-col items-center bg-gray-900/50 p-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105'>
       <h3 className="text-2xl font-semibold mb-3 text-blue-300">{name}</h3>
       <div className="w-full bg-gray-800/50 rounded-full h-2.5 mb-4">
         <div
@@ -37,7 +37,7 @@ export default function SkillBar({ name, level }) {
           aria-label={`Niveau de compétence pour ${name} à ${level}%`}
         ></div>
       </div>
-      <p className="text-gray-300">Niveau: {level}%</p>
+      <p className="text-gray-400">Niveau: {level}%</p>
     </div>
   )
 }

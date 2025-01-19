@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import { PaperClipIcon, AcademicCapIcon, ArrowDownTrayIcon } from '@heroicons/react/24/solid';
 import FavoriteTechnologies from '@/components/FavoriteTechnologies';
-// import Testimonials from '@/components/Testimonials';
+import Caractere from '@/components/Caractere';
+import Services from '@/components/Services';
+import Contact from '@/app/contact/page';
 
 export default function Home() {
-  // Informations utilisateur statiques
   const user = {
     name: 'Léomyre',
     bio: 'Développeur passionné par les technologies modernes et la création d\'applications web. J\'aime relever des défis techniques et apprendre de nouvelles compétences chaque jour.',
-    image: '/leomyre.jpg', // Lien vers l'image de profil
-    cv: '/cv-leomyre.pdf', // Lien vers le fichier PDF du CV
+    image: '/leomyre.jpg',
+    cv: '/cv_leomyre.pdf',
   };
 
   return (
@@ -19,7 +20,6 @@ export default function Home() {
           Bienvenue sur mon Portfolio
         </h1>
         
-        {/* Image centrée */}
         <div className="mb-6 flex justify-center">
           <img 
             src={user.image} 
@@ -28,7 +28,6 @@ export default function Home() {
           />
         </div>
         
-        {/* Informations utilisateur */}
         <h2 className="text-3xl font-bold mb-4">
           Je suis <span className="text-blue-300">{user.name}</span>
         </h2>
@@ -36,7 +35,6 @@ export default function Home() {
           {user.bio}
         </p>
 
-        {/* Boutons d'action */}
         <div className="flex flex-wrap justify-center gap-6 mb-8">
           <Link 
             href="/projects" 
@@ -65,9 +63,17 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Nouvelles sections */}
-        <FavoriteTechnologies />
-        {/* <Testimonials /> */}
+        {/* Espacement entre les sections */}
+        <div className="space-y-12">
+          <Caractere />
+          <Services />
+          <FavoriteTechnologies />
+        </div>
+
+        {/* Section Contact avec marge */}
+        <div className="mt-12">
+          <Contact />
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import UrlConfig from '../../util/config';
 import Loading from '../../components/Loading';
 
 export default function Projects() {
