@@ -4,6 +4,7 @@ import FavoriteTechnologies from '@/components/FavoriteTechnologies';
 import Caractere from '@/components/Caractere';
 import Services from '@/components/Services';
 import Contact from '@/app/contact/page';
+import ContactIcon from '@/components/ContactIcon'
 import Projects from '@/app/projects/page';
 import AnimatedIntro from '../components/AnimatedIntro';
 import AnimatedBio from '../components/AnimatedBio';
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full text-center text-gray-100 px-6 py-8">
       {/* Main container with max-width to limit the size */}
-      <div className="bg-gray-800/40 p-10 rounded-lg shadow-2xl border border-gray-700/30 w-full min-h-screen flex flex-col items-center">
+      <div className="bg-gray-800/40 p-10 sm:p-8 md:p-6 lg:p-4 xl:p-2 rounded-lg shadow-2xl border border-gray-700/30 flex-col items-center">
 
         
         {/* Main title */}
@@ -78,15 +79,11 @@ export default function Home() {
         </div>
 
         {/* Sections */}
-        <div className="space-y-12 w-full mb-12">
+        <div className="">
           <Caractere />
           <Services />
           <Projects />
           <FavoriteTechnologies />
-        </div>
-
-        {/* Contact section */}
-        <div className="mt-12 w-full">
           <Contact />
         </div>
       </div>

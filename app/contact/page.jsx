@@ -1,6 +1,6 @@
 "use client";
 
-import { FaEnvelope, FaPhoneAlt, FaGithub, FaFacebookF, FaWhatsapp } from 'react-icons/fa'; // Import des icônes de react-icons
+import { FaEnvelope, FaPhoneAlt, FaGithub, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 
 export default function Contact() {
   const contact = {
@@ -19,7 +19,7 @@ export default function Contact() {
         {contact ? (
           <div className="space-y-4">
             <p className="flex items-center">
-              <FaEnvelope className="h-6 w-6 text-blue-300 mr-2" />
+              <FaEnvelope className="h-6 w-6 text-blue-300 mr-2 transform transition-transform duration-300 hover:scale-125" />
               <strong className="text-blue-300 mr-2">Email:</strong>
               <a
                 href={`mailto:${contact.email}`}
@@ -30,13 +30,13 @@ export default function Contact() {
             </p>
 
             <p className="flex items-center">
-              <FaWhatsapp className="h-6 w-6 text-blue-300 mr-2" />
+              <FaWhatsapp className="h-6 w-6 text-blue-300 mr-2 transform transition-transform duration-300 hover:scale-125" />
               <strong className="text-blue-300 mr-2">WhatsApp:</strong>
               <span className="text-gray-200">{contact.whatsapp}</span>
             </p>
 
             <p className="flex items-center">
-              <FaGithub className="h-6 w-6 text-blue-300 mr-2" />
+              <FaGithub className="h-6 w-6 text-blue-300 mr-2 transform transition-transform duration-300 hover:scale-125" />
               <strong className="text-blue-300 mr-2">GitHub:</strong>
               <a
                 href={contact.github}
@@ -49,7 +49,7 @@ export default function Contact() {
             </p>
 
             <p className="flex items-center">
-              <FaFacebookF className="h-6 w-6 text-blue-300 mr-2" />
+              <FaFacebookF className="h-6 w-6 text-blue-300 mr-2 transform transition-transform duration-300 hover:scale-125" />
               <strong className="text-blue-300 mr-2">Facebook:</strong>
               <a
                 href={contact.facebook}
