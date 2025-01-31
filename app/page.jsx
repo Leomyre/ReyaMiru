@@ -14,7 +14,7 @@ export default function Home() {
     name: "Hello, I am Léomyre",
     bio: 'A developer passionate about modern technologies and creating web applications. I love taking on technical challenges and learning new skills every day.',
     image: '/leomyre.jpg',
-    cv: '/cv_leomyre.pdf',
+    cv: '/Leomyre_cv.pdf',
   };
 
   return (
